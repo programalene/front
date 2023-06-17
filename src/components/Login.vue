@@ -32,7 +32,7 @@
     methods: {
       async login() {
         try {
-          const response = await fetch('https://apiwebsenac21.azurewebsites.net/login', {
+          const response = await fetch('https://localhost/login', {
             method: 'POST',
             headers: {
               'Content-Type': 'application/json'
