@@ -35,7 +35,7 @@
       };
     },
     created() {
-      axios.get(https://apiwebsenac3.azurewebsites.net/alunos').then(response => {
+      axios.get('https://apiwebsenac3.azurewebsites.net/alunos').then(response => {
         //console.log(response.data);
         this.alunos = response.data;
       });
