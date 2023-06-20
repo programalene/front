@@ -35,14 +35,14 @@
       };
     },
     created() {
-      axios.get('https://apiwebsenac21.azurewebsites.net/alunos').then(response => {
+      axios.get(https://apiwebsenac3.azurewebsites.net/alunos').then(response => {
         //console.log(response.data);
         this.alunos = response.data;
       });
     },
     methods: {  
       deleteAluno(codigoaluno) { 
-        axios.get('https://apiwebsenac21.azurewebsites.net/matriculasPorAluno/'+codigoaluno).then(response => {
+        axios.get('https://apiwebsenac3.azurewebsites.net/matriculasPorAluno/'+codigoaluno).then(response => {
           if ( response.data.length == 0 ) {
             axios.delete('https://apiwebsenac21.azurewebsites.net/alunos/'+codigoaluno).then(() => {
               // Atualiza a lista de alunos
