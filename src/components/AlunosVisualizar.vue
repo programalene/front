@@ -39,10 +39,10 @@
     },
     created() {
       const codigoaluno = this.$route.params.codigoaluno;
-      axios.get(`https://apiwebsenac21.azurewebsites.net/matriculasPorAluno/${codigoaluno}`).then(response => {
+      axios.get(`https://apiwebsenac3.azurewebsites.net/matriculasPorAluno/${codigoaluno}`).then(response => {
         this.cursos = response.data;
       });
-      axios.get(`https://apiwebsenac21.azurewebsites.net/alunos/${codigoaluno}`).then(response2 => {
+      axios.get(`https://apiwebsenac3.azurewebsites.net/alunos/${codigoaluno}`).then(response2 => {
         this.aluno = response2.data
         this.aluno = this.aluno[0]
         console.log(this.aluno)
@@ -55,7 +55,7 @@
   
       },
       deleteMatricula(codigomatricula) { 
-        axios.delete('https://apiwebsenac21.azurewebsites.net/matriculas/'+codigomatricula).then(() => {
+        axios.delete('https://apiwebsenac3.azurewebsites.net/matriculas/'+codigomatricula).then(() => {
             // Atualiza a lista de alunos
             this.cursos = this.cursos.filter(curso => curso.codigomatricula !== codigomatricula);
         });                    
