@@ -42,12 +42,12 @@
     },
     methods: {
       carregarAlunos() {
-        axios.get('https://apiwebsenac21.azurewebsites.net/alunos').then((response) => {
+        axios.get('https://apiwebsenac3.azurewebsites.net/alunos').then((response) => {
           this.alunos = response.data;
         });
       },
       carregarCursos() {
-        axios.get('https://apiwebsenac21.azurewebsites.net/cursos').then((response) => {
+        axios.get('https://apiwebsenac3.azurewebsites.net/cursos').then((response) => {
           this.cursos = response.data;
         });
       },
@@ -59,7 +59,7 @@
   
         //console.log(produto);
         
-         axios.post('https://apiwebsenac21.azurewebsites.net/matriculas', matricula).then(() => {
+         axios.post('https://apiwebsenac3.azurewebsites.net/matriculas', matricula).then(() => {
           // Redireciona para a página de listagem de tipos de produto
           alert('Matrícula realizada com sucesso!');
           // Limpar Campos
